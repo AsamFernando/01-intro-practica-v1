@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Ejercicio2 {
     //int[] listaInts= new int[10];
-    ArrayList<Integer> listaInts = new ArrayList<Integer>();
+    ArrayList<Integer> listaInts = new ArrayList<>();
     int primerNro;
 
     public void setPrimerNro(int setPrimero) {
