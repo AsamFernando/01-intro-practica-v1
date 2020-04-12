@@ -1,5 +1,4 @@
 package ar.edu.unahur.obj2.ejercicio3;
-import ar.edu.unahur.obj2.ejercicio2.Ejercicio2;
 
 import java.util.Scanner;
 import java.lang.Math;
@@ -13,7 +12,7 @@ public class Ejercicio3 {
     public void pedirTempsYcalcularMedia() {
         Scanner scanTemp = new Scanner(System.in);
         for(int i=0; i<listaTemps.length; i++) {
-            System.out.println("Ingresa una temperatura con decimales: ");
+            System.out.printf("Ingresa una temperatura para la hora %d%n: ", i);
             float tempXHora = scanTemp.nextFloat();
             listaTemps[i] = tempXHora;
             mediaTemps += tempXHora;
@@ -30,7 +29,7 @@ public class Ejercicio3 {
     }
     public void CrearGraficoBarras() {
         for(int i=0; i<listaTemps.length; i++) {
-            System.out.println(i + "  " + crearUnaBarra(listaTemps[i]) + "  " + esMaxOMin(listaTemps[i]));
+            System.out.println(i + "  " + this.crearUnaBarra(listaTemps[i]) + "  " + this.esMaxOMin(listaTemps[i]));
         }
     }
     public void esMayorOMenorTemp(float temp) {
@@ -57,7 +56,7 @@ public class Ejercicio3 {
         this.pedirTempsYcalcularMedia();
         this.calcularMaxMinTemp();
         this.CrearGraficoBarras();
-        System.out.printf("media: %.1f%n", mediaTemps);
+        System.out.printf("Media: %.1f%n", mediaTemps);
     }
     public static void main(String[] args) {
         Ejercicio3 ej3 = new Ejercicio3();
